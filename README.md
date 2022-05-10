@@ -8,7 +8,7 @@
   - LinkedIn:[defleppard333](https://linkedin.com/in/deflepparrd333 "LinkedIn")
   - GitHub: [defleppard333](https://github.com/DefLeppard333 "GitHub")
   - Codewars: [defleppard333](https://www.codewars.com/users/defleppard "Codewars")
-  - 
+  
 # Skills:
   -	Good knowledge of JavaScript, HTML, CSS
   -	Experience of creating responsive websites
