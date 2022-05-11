@@ -1,0 +1,124 @@
+
+.main{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    &-aside{
+        background-color: $main-color;
+        flex-basis: 30%;
+    
+        &__contacts{
+            & ul{
+                margin: 0;
+                margin-top: 20px;
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                & li{
+                    width:32px;
+                    height: 32px;
+                    margin-right: 20px;
+                }
+            }
+           
+        }
+       
+        &__wrapper{
+            margin: 100px 5% 0 15%;
+            display: flex;
+            flex-direction: column;
+            & h2{
+                @include title;
+            }
+        }
+        &__address{
+            flex-basis: 100%;
+            color: $background-color;
+            font-size: 16px;
+            font-style:normal;
+            
+        }
+    //!Hard skills------------------------------------------------------------------------------------------
+        &__hard-skills{
+            margin-top: 10px;
+            
+        }
+        &__skills{
+            padding: 0;
+            list-style-type: none;
+            color: $background-color;
+                
+            & li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            & h3{
+                font-size: 12px;
+            }
+            &-content{
+                display: flex;
+                align-items:center
+            }
+            &-progress{
+                
+                background-color: $progress-color;
+                border-radius: 20px;
+                &::-webkit-progress-bar {
+                    background-color: rgb(80, 79, 79);
+                  }
+                &::-webkit-progress-value {
+                    background-color: $progress-color;
+                  }
+                &::-moz-progress-bar {
+                    background-color: $progress-color;
+                  }
+                &-num{
+                    margin-left: 10px;
+                    font-size: 13px
+                    
+                }           
+                
+            }
+        }
+        //! Languages----------------------------------------------------------------------
+        &__langs{
+            &-list{
+                padding: 0;
+                list-style-type: none;
+                color: $background-color;
+                & li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items:center;
+                    & h3{
+                        font-size: 12px;
+                    }
+                    & span{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        &__hobbies{
+            margin-bottom: 20px;
+            & ul{
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                margin-right: 20px;
+                & li{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+       
+    }
+//! Main content----------------------------------------------------------------------------------
+    &__content{
+        flex-basis: 70%;
+    }
+}
