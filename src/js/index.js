@@ -18,3 +18,14 @@ let progressNumber = document.querySelectorAll('.main-aside__skills-progress-num
     });
 })();
 
+
+//! burger
+
+const burger = document.querySelector(".main-aside__menu");
+const menu = document.querySelector(".main-aside");
+
+burger.addEventListener('click', () =>{
+    menu.classList.toggle("main-aside_active");
+ 
+})
+

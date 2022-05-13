@@ -3,6 +3,9 @@
     position: relative;
     height: 140px;
     background-color:$main-color;
+    @media(max-width: 360px){
+        height: 100px;
+    }
     &::after{
         content:"";
         position: absolute;
@@ -23,6 +26,16 @@
         height: 150px;
         overflow: hidden;
         z-index: 3;
+        @media(max-width: 768px){
+            bottom:0;
+            top: 15px;
+            left: 4%;
+            width: 100px;
+            height: 100px;
+        }
+        @media(max-width: 520px){
+            display: none;
+        }
         &-wrapper{
             width:70%;
             &::after{
@@ -36,6 +49,9 @@
                 background-color: $background-color;
                 border: 2px solid $main-color;
                 z-index: 2;
+                @media(max-width: 768px){
+                      display: none;
+                  }
             }
             &::before{
                 content:'';
@@ -46,6 +62,10 @@
                 height: 190px;
                 background-color: $background-color;
                 border-radius:100%;
+                z-index: 1;
+                @media(max-width: 768px){
+                    display: none;
+                }
             }
         }
         & img{
@@ -57,18 +77,32 @@
         float: right;
         color: $background-color;
         text-transform: uppercase;
+        @media(max-width: 520px){
+            width: 100%;
+        }
     }
     &__name{
         margin: 0;
         margin-top: 35px;
         font-size: 35px;
         letter-spacing: 0.5rem;
+        @media(max-width: 600px){
+            font-size: 26px;
+        }
+        @media(max-width: 360px){
+            font-size: 20px;
+            margin-top: 25px;
+        }
+        
     }
     &__subtitle{
         margin-top: 0.5rem;
         font-size: 15px;
         line-height: 40px;
         letter-spacing: 1rem;
+        @media(max-width: 600px){
+            font-size: 10px;
+        }
     }
 }
 
