@@ -1,0 +1,21 @@
+@import "base/variables";
+@import "base/mixins";
+:root {
+    font-size: 10px;  
+ }
+html{
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+ }
+body{
+    background-color:$background-color;
+}
+
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+ }
+ @import "blocks/header";
+ @import "blocks/main";

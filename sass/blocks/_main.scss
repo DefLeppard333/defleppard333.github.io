@@ -1,0 +1,293 @@
+
+.main{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &-aside{
+        background-color: $main-color;
+        flex-basis: 30%;
+        min-width: 270px;
+        position: relative;
+        
+        &__menu{
+            display: none;
+            position: absolute;
+            top:0;
+            right: -50px;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            line-height: 28px;
+            color:$background-color;
+            letter-spacing: 0.06em;
+            background-color: $main-color;
+            cursor: pointer;
+            @media(max-width: 768px){
+                display: block;
+            }
+            
+
+        }
+        
+        @media(max-width: 768px){
+            position:absolute;
+            top:0;
+            left: -270px;
+         
+            &_active{
+                left: 0;
+            }
+        }
+    
+        &__contacts{
+            & ul{
+                margin: 0;
+                margin-top: 20px;
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                
+                & li{
+                    width:32px;
+                    height: 32px;
+                    margin-right: 20px;
+                }
+            }
+           
+        }
+       
+        &__wrapper{
+            margin: 100px 5% 0 15%;
+            display: flex;
+            flex-direction: column;
+            @media(max-width: 768px){
+                margin: 20px 5% 0 15%;   
+            }
+            & h2{
+                @include title;
+            }
+        }
+        &__address{
+            flex-basis: 100%;
+            color: $background-color;
+            font-size: 16px;
+            font-style:normal;
+            
+        }
+    //!Hard skills------------------------------------------------------------------------------------------
+        &__hard-skills{
+            margin-top: 10px;
+            
+        }
+        &__skills{
+            padding: 0;
+            list-style-type: none;
+            color: $background-color;
+                
+            & li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            & h3{
+                font-size: 12px;
+            }
+            &-content{
+                display: flex;
+                align-items:center
+            }
+            &-progress{
+                
+                background-color: $progress-color;
+                border-radius: 20px;
+                &::-webkit-progress-bar {
+                    background-color: rgb(80, 79, 79);
+                  }
+                &::-webkit-progress-value {
+                    background-color: $progress-color;
+                  }
+                &::-moz-progress-bar {
+                    background-color: $progress-color;
+                  }
+                &-num{
+                    margin-left: 10px;
+                    font-size: 13px
+                    
+                }           
+                
+            }
+        }
+        //! Languages----------------------------------------------------------------------
+        &__langs{
+            &-list{
+                padding: 0;
+                list-style-type: none;
+                color: $background-color;
+                & li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items:center;
+                    & h3{
+                        font-size: 12px;
+                    }
+                    & span{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        &__hobbies{
+            margin-bottom: 20px;
+            & ul{
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                margin-right: 20px;
+                & li{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+       
+    }
+//! Main content----------------------------------------------------------------------------------
+    &__content{
+        flex-basis: 70%;
+        @media(max-width: 768px){
+            flex-basis: 100%;
+        }
+        &-line{
+            margin-top: 40px;
+            padding-left: 10%;
+            height: 50px;
+            width: 70%;
+            background-color:$main-color;
+            border-radius:0 50px 50px 0;
+            display: flex;
+            align-items:center;
+            & img{
+                width: 32px;
+                height: 32px;
+            }
+            h2{
+                @include title;
+                font-size: 16px;
+                margin-left: 10%;  
+            }
+        }
+        &-about{
+            margin: 30px 10px 0px 10%;
+            font-size: 16px;
+            text-align: justify;
+        }
+        &-wrapper{
+            display: flex;
+            margin: 30px 10px 0px 10%;
+            @media (max-width: 500px){
+                flex-direction: column;
+            }
+        }
+        &-arrow{
+            margin-right: 20px;
+            flex-basis: 15%;
+            min-width: 80px;
+            height: 30px;
+            line-height: 31px;
+            background-color: $main-color;
+            clip-path: polygon(0% 0%, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+            text-align: left;
+            padding-left: 10px;
+            font-weight: 700;
+            color:$background-color;
+            z-index: -1;
+            @media (max-width: 500px){
+                width:15%;
+                margin-bottom: 15px;
+            }
+        }
+        &-text{
+            flex-basis: 85%;
+            font-size: 16px;
+            text-align: left;
+            & h3{
+                font-family: "Lato", serif;
+                margin: 0;
+                margin-bottom: 10px;
+                & span{
+                    font-style: italic;
+                }
+                
+            }
+            & ul{
+                padding: 0px 0px 0px 30px;
+                & li{
+                    margin-bottom: 10px;
+                    line-height: 20px;
+                }
+            }
+          
+        }
+        //! Projects-------------------------------------------------------------------------------------------
+        &-list{
+            display: flex;  
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 25px;
+            
+            & li{
+                flex-basis: 45%;
+                display: flex;
+                overflow: hidden;
+                margin-bottom: 45px;
+                position: relative;
+                border-radius: 5px;
+                overflow: hidden;
+                transition: all 1s ease;
+                cursor: pointer;
+                box-shadow: 0 0 5px #808080;
+                overflow: hidden;
+                &:hover{
+                    box-shadow: 5px 5px 10px #808080;
+
+                    & .main__content-desc{
+                        opacity: 1;
+                        transform: rotateY(0);
+                    }
+                }
+                & a{
+                    color: $background-color;
+                    font-size: 26px;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                }
+                
+            }
+            & img {
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+        &-desc{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $main-color;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: all 1s ease;
+            transform: rotateY(90deg);
+        }
+        
+    }
+}
